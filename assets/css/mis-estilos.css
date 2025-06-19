@@ -1,0 +1,11 @@
+/* navbar */
+.logo {
+	height: 40px;
+}
+
+/* heroSection */
+.heroSection {
+	background-image: url(../images/Background.png);
+	background-size: cover;
+	padding: 5rem 1.5rem;
+}

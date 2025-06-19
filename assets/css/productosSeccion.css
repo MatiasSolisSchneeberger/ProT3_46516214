@@ -1,0 +1,45 @@
+/* productosSeccion */
+.productos-seccion {
+	padding: 24px 48px;
+	display: flex;
+	flex-direction: column;
+}
+
+.productos-header {
+	position: relative;
+	padding-bottom: 16px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.productos-cards {
+	display: flex;
+	display: grid;
+	grid-gap: 16px;
+	position: relative;
+	justify-content: center;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.card-img-top {
+	animation: ease-in-out;
+	transition: 0.3s;
+    aspect-ratio: 1/1;
+    max-height: 250px;
+    object-fit: contain;
+}
+
+.card {
+	width: 100%;
+    min-width: none;
+    max-width: none;
+}
+
+.card:hover .card-img-top {
+	transform: scale(1.1);
+}
+
+.card:hover {
+	outline: var(--bs-primary) 2px solid;
+}

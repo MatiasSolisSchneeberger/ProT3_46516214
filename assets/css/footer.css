@@ -1,0 +1,10 @@
+.footer{
+    padding-left: 24px;
+    padding-right: 24px;
+}
+
+.principal{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}

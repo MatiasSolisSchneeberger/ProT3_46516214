@@ -1,0 +1,10 @@
+.img-fluid{
+	animation: ease-in-out;
+	transition: 0.3s;
+    aspect-ratio: 1;
+    object-fit: cover;
+}
+
+.img-fluid:hover{
+    transform: scale(1.05);
+}
