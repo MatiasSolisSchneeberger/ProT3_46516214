@@ -6,7 +6,8 @@ class Home extends BaseController
 {
     public function index()
     {
-        echo view('front/componentes/head');
+        $data['titulo'] = 'Inicio';
+        echo view('front/componentes/head', $data);
         echo view('front/secciones/navbar');
         echo view('front/secciones/heroSection');
         echo view('front/secciones/productos');
@@ -15,7 +16,8 @@ class Home extends BaseController
     
     public function productos()
     {
-        echo view('front/componentes/head');
+        $data['titulo'] = 'Productos';
+        echo view('front/componentes/head', $data);
         echo view('front/secciones/navbar');
         echo view('front/componentes/productosTodos');
         echo view('front/secciones/footer');
@@ -23,7 +25,8 @@ class Home extends BaseController
 
     public function iPhone16ProMax()
     {
-        echo view('front/componentes/head');
+        $data['titulo'] = 'iPhone 16 Pro Max';
+        echo view('front/componentes/head', $data);
         echo view('front/secciones/navbar');
         echo view('front/secciones/productoPresentacion');
         echo view('front/secciones/productos');
@@ -32,28 +35,32 @@ class Home extends BaseController
 
     public function sobreNosotros()
     {
-        echo view('front/componentes/head');
+        $data['titulo'] = 'Sobre Nosotros';
+        echo view('front/componentes/head', $data);
         echo view('front/secciones/navbar');
         echo view('front/secciones/sobreNosotros');
         echo view('front/secciones/footer');
     }
     public function AcercaDe()
     {
-        echo view('front/componentes/head');
+        $data['titulo'] = 'Acerca de';
+        echo view('front/componentes/head', $data);
         echo view('front/secciones/navbar');
         echo view('front/secciones/AcercaDe');
         echo view('front/secciones/footer');
     }
     public function Registrarse()
     {
-        echo view('front/componentes/head');
+        $data['titulo'] = 'Registrarse';
+        echo view('front/componentes/head', $data);
         echo view('front/secciones/navbar');
         echo view('front/secciones/Registrarse');
         echo view('front/secciones/footer');
     }
     public function IniciarSesion()
     {
-        echo view('front/componentes/head');
+        $data['titulo'] = 'Iniciar Sesión';
+        echo view('front/componentes/head', $data);
         echo view('front/secciones/navbar');
         echo view('front/secciones/IniciarSesion');
         echo view('front/secciones/footer');
