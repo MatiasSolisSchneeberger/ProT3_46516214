@@ -6,7 +6,7 @@ class Home extends BaseController
 {
     public function index()
     {
-        $data['titulo'] = 'Inicio';
+        $data['title'] = 'Inicio';
         echo view('front/componentes/head', $data);
         echo view('front/secciones/navbar');
         echo view('front/secciones/heroSection');
@@ -16,7 +16,7 @@ class Home extends BaseController
     
     public function productos()
     {
-        $data['titulo'] = 'Productos';
+        $data['title'] = 'Productos';
         echo view('front/componentes/head', $data);
         echo view('front/secciones/navbar');
         echo view('front/componentes/productosTodos');
@@ -25,7 +25,7 @@ class Home extends BaseController
 
     public function iPhone16ProMax()
     {
-        $data['titulo'] = 'iPhone 16 Pro Max';
+        $data['title'] = 'iPhone 16 Pro Max';
         echo view('front/componentes/head', $data);
         echo view('front/secciones/navbar');
         echo view('front/secciones/productoPresentacion');
@@ -35,7 +35,7 @@ class Home extends BaseController
 
     public function sobreNosotros()
     {
-        $data['titulo'] = 'Sobre Nosotros';
+        $data['title'] = 'Sobre Nosotros';
         echo view('front/componentes/head', $data);
         echo view('front/secciones/navbar');
         echo view('front/secciones/sobreNosotros');
@@ -43,7 +43,7 @@ class Home extends BaseController
     }
     public function AcercaDe()
     {
-        $data['titulo'] = 'Acerca de';
+        $data['title'] = 'Acerca de';
         echo view('front/componentes/head', $data);
         echo view('front/secciones/navbar');
         echo view('front/secciones/AcercaDe');
@@ -51,18 +51,18 @@ class Home extends BaseController
     }
     public function Registrarse()
     {
-        $data['titulo'] = 'Registrarse';
+        $data['title'] = 'Registrarse';
         echo view('front/componentes/head', $data);
         echo view('front/secciones/navbar');
-        echo view('front/secciones/Registrarse');
+        echo view('back/users/Registrarse');
         echo view('front/secciones/footer');
     }
     public function IniciarSesion()
     {
-        $data['titulo'] = 'Iniciar Sesión';
+        $data['title'] = 'Iniciar Sesión';
         echo view('front/componentes/head', $data);
         echo view('front/secciones/navbar');
-        echo view('front/secciones/IniciarSesion');
+        echo view('back/users/IniciarSesion');
         echo view('front/secciones/footer');
     }
 
