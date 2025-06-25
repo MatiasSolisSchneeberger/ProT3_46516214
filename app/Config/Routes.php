@@ -10,15 +10,16 @@ $routes->get('productos', 'Home::productos');
 $routes->get('productos/iphone', 'Home::iPhone16ProMax');
 $routes->get('sobre-nosotros', 'Home::SobreNosotros');
 $routes->get('acerca-de', 'Home::AcercaDe');
-$routes->get('registrarse', 'Home::Registrarse');
-$routes->get('iniciar-sesion', 'Home::IniciarSesion');
 
 /* Rutas de usuarios */
-$routes->get('/registro','UserController::create');
+$routes->get('/registrarse','UserController::create');
 $routes->post('/enviar-form','UserController::formValidation');
 
 /* rutas del login */
-$routes->get('/IniciarSesion', 'Login_controller');
-$routes->post('/enviarlogin','Login_controller::auth');
-$routes->get('/panel', 'Panel_controller::index',['filter' => 'auth']);
-$routes->get('/logout', 'Login_controller::logout');
+$routes->get('/IniciarSesion', 'LoginController::index');
+$routes->post('/enviar-login','LoginController::auth');
+$routes->get('/MiPerfil', 'PanelController::index',['filter' => 'auth']);
+$routes->get('/logout', 'LoginController::logout');
+
+/* Ruta de prueba */
+$routes->get('/test-db', 'TestController::index');
