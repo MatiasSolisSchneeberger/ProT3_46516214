@@ -1,3 +1,4 @@
+<?php $session = session(); $nombre = $session->get('name'); $profile_id = $session->get('profile_id'); ?>
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="container-fluid">
         <a class="navbar-brand" href="<?php echo base_url('/'); ?>">
@@ -20,19 +21,81 @@
                 <li class="nav-item">
                     <a class="nav-link" href="<?php echo base_url('/acerca-de'); ?>">Acerca de</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="<?php echo base_url('/registrarse'); ?>">Registrarse</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="<?php echo base_url('/iniciar-sesion'); ?>">Iniciar Sesión</a>
-                </li>
+                <?php if (!$session->get('isLoggedIn')): ?>
+                    <li class="nav-item">
+                        <a class="nav-link" href="<?php echo base_url('/registrarse'); ?>">Registrarse</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="<?php echo base_url('/IniciarSesion'); ?>">Iniciar Sesión</a>
+                    </li>
+                <?php endif; ?>
             </ul>
-            <form class="d-flex" role="search">
-                <input class="form-control me-2" type="search" placeholder="Search" arialabel="Search">
-                <button class="btn btn-outline-success" type="submit">Search</button>
-            </form>
+            
+            <?php if ($session->get('isLoggedIn')): ?>
+                <!-- Usuario logueado -->
+                <div class="d-flex align-items-center">
+                    <form class="d-flex me-3" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit">Search</button>
+                    </form>
+                    
+                    <!-- Dropdown del usuario -->
+                    <div class="dropdown">
+                        <button class="btn btn-link dropdown-toggle d-flex align-items-center text-decoration-none" type="button" id="userDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                            <div class="position-relative me-2">
+                                <img src="<?php echo base_url('assets/images/personal/persona1.jpg'); ?>" 
+                                        class="rounded-circle" 
+                                        width="40" 
+                                        height="40" 
+                                        alt="Foto de perfil"
+                                        style="object-fit: cover; <?php echo ($profile_id == 1) ? 'border: 3px solid #0d6efd;' : ''; ?>">
+                            </div>
+                            <span class="text"><?php echo $nombre; ?></span>
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="userDropdown">
+                            <li>
+                                <div class="dropdown-item-text">
+                                    <div class="fw-bold"><?php echo $nombre . ' ' . $session->get('last_name'); ?></div>
+                                    <small class="text-muted"><?php echo $session->get('email'); ?></small>
+                                </div>
+                            </li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li>
+                                <a class="dropdown-item" href="<?php echo base_url('/MiPerfil'); ?>">
+                                    <i class="fas fa-user me-2"></i>Mi Perfil
+                                </a>
+                            </li>
+                            <?php if ($profile_id == 1): ?>
+                                <li>
+                                    <a class="dropdown-item" href="<?php echo base_url('/panel-admin'); ?>">
+                                        <i class="fas fa-cog me-2"></i>Panel de Administración
+                                    </a>
+                                </li>
+                            <?php endif; ?>
+                            <li>
+                                <a class="dropdown-item" href="<?php echo base_url('/carrito'); ?>">
+                                    <i class="fas fa-shopping-cart me-2"></i>Mi Carrito
+                                </a>
+                            </li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li>
+                                <a class="dropdown-item text-danger" href="<?php echo base_url('/logout'); ?>">
+                                    <i class="fas fa-sign-out-alt me-2"></i>Cerrar Sesión
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            <?php else: ?>
+                <!-- Usuario no logueado -->
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            <?php endif; ?>
+            
             <!-- Theme toggle button -->
-            <div class="dropdown bd-mode-toggle">
+            <div class="dropdown bd-mode-toggle ms-2">
                 <button class="btn btn-bd-primary py-2 dropdown-toggle d-flex align-items-center" id="bd-theme" type="button" aria-expanded="false" data-bs-toggle="dropdown" aria-label="Toggle theme (auto)">
                     <svg class="bi my-1 theme-icon-active" width="1em" height="1em">
                         <use href="#circle-half"></use>
