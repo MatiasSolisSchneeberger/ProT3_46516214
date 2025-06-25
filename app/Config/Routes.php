@@ -8,6 +8,13 @@ use CodeIgniter\Router\RouteCollection;
 $routes->get('/', 'Home::index');
 $routes->get('productos', 'Home::productos');
 $routes->get('productos/iphone', 'Home::iPhone16ProMax');
+
+// Rutas para categorías de productos con formato /categoria/[categoria]
+$routes->get('categoria/smartphones', 'Home::categoria');
+$routes->get('categoria/laptops', 'Home::categoria');
+$routes->get('categoria/tablets', 'Home::categoria');
+$routes->get('categoria/accesorios', 'Home::categoria');
+
 $routes->get('sobre-nosotros', 'Home::SobreNosotros');
 $routes->get('acerca-de', 'Home::AcercaDe');
 
