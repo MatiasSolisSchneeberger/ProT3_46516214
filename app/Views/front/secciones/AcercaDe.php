@@ -3,7 +3,7 @@
     <div class="container">
         <!-- Jumbotron Header -->
         <div class="jumbotron bg-secondary p-5 rounded-3 mb-4">
-            <h1 class="display-4">Acerca de Tienda Libre</h1>
+            <h1 class="display-4">Acerca de Tienda Abierta</h1>
             <p class="lead">Tu destino confiable para tecnología de última generación</p>
         </div>
 
@@ -14,7 +14,7 @@
                     <div class="card-body">
                         <h2 class="card-title">Nuestra Empresa</h2>
                         <p class="card-text">
-                            Tienda Libre es una empresa líder en la venta de productos tecnológicos de alta gama,
+                            Tienda Abierta es una empresa líder en la venta de productos tecnológicos de alta gama,
                             especializada en dispositivos Apple y otros productos premium. Fundada en 2018, nos hemos
                             convertido en el referente de confianza para los amantes de la tecnología en Argentina.
                         </p>

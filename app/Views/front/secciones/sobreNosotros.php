@@ -8,7 +8,7 @@
         <div class="col-12">
             <h2 class="mb-4">Nuestra Historia</h2>
             <p class="lead">
-                Tienda Libre nació en 2018 con una visión clara: democratizar el comercio electrónico en América Latina. Inspirados por el auge de los marketplaces globales, un grupo de jóvenes emprendedores decidió crear una plataforma que conectara a vendedores y compradores de manera segura, rápida y accesible. Nuestra misión es ofrecer a millones de personas la posibilidad de comprar y vender productos con total confianza. Hoy, seguimos innovando y creciendo, comprometidos con la calidad, la transparencia y el acceso para todos.
+                Tienda Abierta nació en 2018 con una visión clara: democratizar el comercio electrónico en América Latina. Inspirados por el auge de los marketplaces globales, un grupo de jóvenes emprendedores decidió crear una plataforma que conectara a vendedores y compradores de manera segura, rápida y accesible. Nuestra misión es ofrecer a millones de personas la posibilidad de comprar y vender productos con total confianza. Hoy, seguimos innovando y creciendo, comprometidos con la calidad, la transparencia y el acceso para todos.
             </p>
         </div>
     </div>
@@ -25,7 +25,7 @@
                         <div class="card-body text-center">
                             <h5 class="card-title">Lucas Fernández</h5>
                             <p class="card-text">CEO & Fundador</p>
-                            <p class="card-text">Apasionado por la tecnología y el comercio electrónico, lidera Tienda Libre con una visión clara de innovación y expansión regional.</p>
+                            <p class="card-text">Apasionado por la tecnología y el comercio electrónico, lidera Tienda Abierta con una visión clara de innovación y expansión regional.</p>
                         </div>
                     </div>
                 </div>

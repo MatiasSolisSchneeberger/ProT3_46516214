@@ -3,10 +3,10 @@
         <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 py-5">
             <div class="col mb-3 principal">
                 <a class="navbar-brand" href="<?php echo base_url('/'); ?>">
-                    <img class="logo" src="<?php echo base_url('assets/images/Logo.png') ?>" alt="Logo Tienda Libre">
+                    <img class="logo" src="<?php echo base_url('assets/images/Logo.png') ?>" alt="Logo Tienda Abierta">
                 </a>
                 <p class="text-body-secondary">
-                    Tienda Libre | Todos los derechos reservados © 2025
+                    Tienda Abierta | Todos los derechos reservados © 2025
                 </p>
             </div>
 
