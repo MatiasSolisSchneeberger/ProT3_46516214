@@ -13,10 +13,10 @@ $imagen = $producto['imagen'] ?? 'assets/images/iPhone16Pro/iPhone16ProMax.png';
 $alt = $producto['alt'] ?? $titulo;
 $descripcion = $producto['descripcion'] ?? 'Some quick example text to build on the card title and make up the bulk of the card\'s content.';
 $mostrar_carrito = $producto['mostrar_carrito'] ?? true;
-$url_detalles = $producto['url_detalles'] ?? base_url('productos/' . strtolower(str_replace(' ', '-', $titulo)));
+$url_detalles = base_url('productos/iphone');
 
-// Verificar si el usuario está logueado usando el helper
-$usuario_logueado = isLoggedIn();
+// Verificar si el usuario está logueado
+$usuario_logueado = session()->get('isLoggedIn') ? true : false;
 ?>
 
 <div class="card h-100">

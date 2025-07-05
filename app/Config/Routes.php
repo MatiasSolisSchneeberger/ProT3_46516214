@@ -27,6 +27,3 @@ $routes->get('/IniciarSesion', 'LoginController::index');
 $routes->post('/enviar-login','LoginController::auth');
 $routes->get('/MiPerfil', 'PanelController::index',['filter' => 'auth']);
 $routes->get('/logout', 'LoginController::logout');
-
-/* Ruta de prueba */
-$routes->get('/test-db', 'TestController::index');
